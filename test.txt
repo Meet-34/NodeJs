@@ -1,0 +1,1 @@
+This is a file created in class to test the Core Module
