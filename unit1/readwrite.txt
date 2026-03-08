@@ -1,0 +1,4 @@
+Appending new data.
+New data appended into the Read&Write.txt file. 
+1772640540063
+Hi, i am writeFileSyncHey, there
