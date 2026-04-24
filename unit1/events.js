@@ -1,6 +1,7 @@
 //! Events 
 
 import { EventEmitter } from 'events'
+
 let booking = new EventEmitter();
 
 //! Event listener - .on()

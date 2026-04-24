@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Single value messaging</h2>
+    <div id="display" style="background-color: #f0f0f0; padding: 10px; margin-bottom: 10px;">
+        Waiting for messages..
+    </div>
+
+    <input id="inp" type="text" placeholder="Type Value...">
+    <button onclick="send()">Send</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function send(){
+            const value = document.getElementById('inp').value;
+            socket.emit('client-msg', value);                                      // Only the value is sent 
+            document.getElementById('inp').value = '';
+        }
+
+        // Catching the single value that is coming from the server 
+        socket.on('server-msg', (data) => {
+            document.getElementById('display').innerText = data;                  // Shown on the screen 
+        });
+    </script>
+</body>
+</html>

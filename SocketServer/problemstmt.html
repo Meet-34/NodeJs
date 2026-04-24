@@ -1,0 +1,56 @@
+<!-- Problem Statement 1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Real Time Communication</h2>
+    <div id="display">
+        Waiting for  messages...
+    </div><br>
+
+    <input id="inp" type="text" placeholder="Type your message...">
+    <button onclick="send()">Send</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function send(){
+            const value = document.getElementById('inp').value;
+            socket.emit('client-msg', value);
+            document.getElementById('inp').value = "";
+        }
+
+        socket.on('server-msg', (data)=>{
+            document.getElementById('display').innerText = data;
+        })
+    </script>
+</body>
+</html> -->
+
+<!-- Problem Statement 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/lily" method="POST">
+        <h4>User ID:</h4>
+        <input type="text" id="userid" placeholder="Enter your id..">
+        <h4>User password:</h4>
+        <input type="password" id="userpass" placeholder="Enter your password..">
+        <h4>User Email:</h4>
+        <input type="email" id="usermail" placeholder="Enter your email..">
+
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f8f5f0;
+            color: #0b3d2e;
+        }
+
+        header {
+            background-color: #0b3d2e;
+            color: #f8f5f0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #eae6df;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #0b3d2e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0b3d2e;
+            color: #f8f5f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #145c45;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Signup</h1>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+</nav>
+
+<div class="container">
+<form action="/signup-submit" method="POST">
+    <label>Name</label><br>
+    <input type="text" name="username"><br><br>
+
+    <label>Email</label><br>
+    <input type="email" name="usermail"><br><br>
+
+    <label>Password</label><br>
+    <input type="password" name="userpass"><br><br>
+
+    <label>Confirm Password</label><br>
+    <input type="password" name="confirmpass"><br><br>
+
+    <button type="submit">Signup</button>
+</form>
+</div>
+
+</body>
+</html>
